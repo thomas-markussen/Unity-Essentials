@@ -1,0 +1,19 @@
+{
+    "name": "com.thimas.unityessentials",
+    "version": "1.0.0",
+    "displayName": "Thimas Unity Essentials",
+    "description": "These are some of the assets, scripts, and whatever that I use in every project",
+    "unity": "2020.3",
+    "author": {
+        "name": "Thomas Markussen",
+        "email": "thomas_ovesen@hotmail.com",
+        "url": "https://github.com/thomas-markussen"
+    },
+    "dependencies": {
+        "com.unity.inputsystem": "3.0.0",
+        "com.unity.cinemachine": "1.7.0",
+        "com.unity.probuilder": "5.2.2",
+        "com.kylewbanks.scenerefattribute": "https://github.com/KyleBanks/scene-ref-attribute.git",
+        "com.eflatun.scenereference": "https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0"
+    }
+}

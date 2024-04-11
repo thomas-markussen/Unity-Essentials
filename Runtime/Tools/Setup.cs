@@ -4,6 +4,7 @@ using static System.IO.Directory;
 using static System.IO.Path;
 using static UnityEditor.AssetDatabase;
 using UnityEditor.PackageManager;
+using System.Threading.Tasks;
 
 public static class Setup
 {
@@ -15,18 +16,27 @@ public static class Setup
     }
 
     [MenuItem("Tools/Setup/Import Basics")]
-    public static void ImportBasicAssets()
+    public async static void ImportBasicAssets()
     {
         Debug.Log("Importing Assets...");
 
         // Git
-        Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
+        var request = Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
         Client.Add("git+https://github.com/KyleBanks/scene-ref-attribute.git");
 
-        // Asset Store
+        //Asset Store
         Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
         Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
+
+        // Custom
+        while (!request.IsCompleted)
+        {
+            await Task.Delay(100);
+        }
+
+        Client.Add("git+https://github.com/thomas-markussen/Unity-Bootstrapper.git");
     }
+
 
 
     static class Folders

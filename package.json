@@ -10,8 +10,8 @@
         "url": "https://github.com/thomas-markussen"
     },
     "dependencies": {
-        "com.unity.inputsystem": "3.0.0",
-        "com.unity.cinemachine": "1.7.0",
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.cinemachine": "2.9.7",
         "com.unity.probuilder": "5.2.2"
     }
 }

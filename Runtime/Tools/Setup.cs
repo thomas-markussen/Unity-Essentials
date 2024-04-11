@@ -19,18 +19,13 @@ public static class Setup
     {
         Debug.Log("Importing Assets...");
 
-        //// Unity Registry
-        //Client.Add("com.unity.cinemachine");
-        //Client.Add("com.unity.inputsystem");
-        //Client.Add("com.unity.probuilder");
+        // Git
+        Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
+        Client.Add("git+https://github.com/KyleBanks/scene-ref-attribute.git");
 
         // Asset Store
         Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
         Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
-
-        // Git
-        //Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
-        //Client.Add("git+https://github.com/KyleBanks/scene-ref-attribute.git");
     }
 
 

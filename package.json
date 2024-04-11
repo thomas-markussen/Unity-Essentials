@@ -12,8 +12,6 @@
     "dependencies": {
         "com.unity.inputsystem": "3.0.0",
         "com.unity.cinemachine": "1.7.0",
-        "com.unity.probuilder": "5.2.2",
-        "com.kylewbanks.scenerefattribute": "git+https://github.com/KyleBanks/scene-ref-attribute.git#0.11.2",
-        "com.eflatun.scenereference": "git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0"
+        "com.unity.probuilder": "5.2.2"
     }
 }

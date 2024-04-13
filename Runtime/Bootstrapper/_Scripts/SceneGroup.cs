@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace Thimas.SceneManagement
 {
@@ -14,7 +12,11 @@ namespace Thimas.SceneManagement
 
         public string FindSceneNameByType(SceneType sceneType)
         {
+#if ENABLE_SCENEREF
             return scenes.FirstOrDefault(scene => scene.sceneType == sceneType)?.reference.Name;
+#else
+            return scenes.FirstOrDefault(scene => scene.sceneType == sceneType)?.reference;
+#endif
         }
     }
 

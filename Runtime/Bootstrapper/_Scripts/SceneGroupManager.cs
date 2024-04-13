@@ -39,8 +39,11 @@ namespace Thimas.SceneManagement
 
                 if (reloadDupScenes == false && loadedScenes.Contains(sceneData.name)) continue;
 
+#if ENABLE_SCENEREF
                 var operation = SceneManager.LoadSceneAsync(sceneData.reference.Path, LoadSceneMode.Additive);
-
+#else
+                var operation = SceneManager.LoadSceneAsync(sceneData.reference, LoadSceneMode.Additive);
+#endif
                 operationGroup.operations.Add(operation);
 
                 OnSceneLoaded?.Invoke(sceneData.name);

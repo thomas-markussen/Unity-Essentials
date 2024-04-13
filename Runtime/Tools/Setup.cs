@@ -4,9 +4,7 @@ using static System.IO.Directory;
 using static System.IO.Path;
 using static UnityEditor.AssetDatabase;
 using UnityEditor.PackageManager;
-using UnityEditor.PackageManager.Requests;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 public static class Setup
 {
@@ -31,8 +29,8 @@ public static class Setup
         gitAssets.ProcessImportQueue();
 
         //Asset Store
-        //Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
-        //Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
+        Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
+        Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
     }
 
     class GitAssets

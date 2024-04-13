@@ -10,7 +10,7 @@ namespace Thimas.SceneManagement
 #if ENABLE_SCENEREF
         public SceneReference reference;
 #else
-public public string reference;
+public string reference;
 #endif
         public string name;
         public SceneType sceneType;

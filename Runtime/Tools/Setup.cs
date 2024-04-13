@@ -21,10 +21,9 @@ public static class Setup
 
         // Git
         Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
-        Client.Add("git+https://github.com/KyleBanks/scene-ref-attribute.git");
-        Client.Add("git+https://github.com/mob-sakai/UIEffect.git");
-        Client.Add("git+https://github.com/mob-sakai/SoftMaskForUGUI.git");
-        Client.Add("git+https://github.com/thomas-markussen/Unity-Bootstrapper.git");
+        Client.Add("https://github.com/KyleBanks/scene-ref-attribute.git");
+        Client.Add("https://github.com/mob-sakai/UIEffect.git");
+        Client.Add("https://github.com/mob-sakai/SoftMaskForUGUI.git");
 
         //Asset Store
         Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");

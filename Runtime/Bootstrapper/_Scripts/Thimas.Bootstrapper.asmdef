@@ -1,0 +1,22 @@
+{
+    "name": "Thimas.Bootstrapper",
+    "rootNamespace": "",
+    "references": [
+        "GUID:caca889fed6088d40b22c2d7e2909c31"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.eflatun.scenereference",
+            "expression": "4.0.0",
+            "define": "ENABLE_SCENEREF"
+        }
+    ],
+    "noEngineReferences": false
+}

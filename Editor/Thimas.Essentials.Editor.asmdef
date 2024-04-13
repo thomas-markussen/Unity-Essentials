@@ -1,7 +1,10 @@
 {
-    "name": "Thimas.Essentials",
+    "name": "Thimas.Essentials.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:4b0942d166e35e04f8d80be365eb9334",
+        "GUID:95cce07a7c7c89043bb2ff92d04a2d59"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

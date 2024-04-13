@@ -4,6 +4,9 @@ using static System.IO.Directory;
 using static System.IO.Path;
 using static UnityEditor.AssetDatabase;
 using UnityEditor.PackageManager;
+using UnityEditor.PackageManager.Requests;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public static class Setup
 {
@@ -19,18 +22,33 @@ public static class Setup
     {
         Debug.Log("Importing Assets...");
 
-        // Git
-        Client.Add("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
-        Client.Add("https://github.com/KyleBanks/scene-ref-attribute.git");
-        Client.Add("https://github.com/mob-sakai/UIEffect.git");
-        Client.Add("https://github.com/mob-sakai/SoftMaskForUGUI.git");
+        GitAssets gitAssets = new GitAssets();
+        gitAssets.QueueImport("git+https://github.com/starikcetin/Eflatun.SceneReference.git#4.0.0");
+        gitAssets.QueueImport("git+https://github.com/KyleBanks/scene-ref-attribute.git");
+        gitAssets.QueueImport("git+https://github.com/mob-sakai/UIEffect.git");
+        gitAssets.QueueImport("git+https://github.com/mob-sakai/SoftMaskForUGUI.git");
+
+        gitAssets.ProcessImportQueue();
 
         //Asset Store
-        Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
-        Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
+        //Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
+        //Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
     }
 
+    class GitAssets
+    {
+        List<string> _addRequests = new();
 
+        public void QueueImport(string path)
+        {
+            _addRequests.Add(path);
+        }
+
+        public void ProcessImportQueue()
+        {
+            Client.AddAndRemove(_addRequests.ToArray());
+        }
+    }
 
     static class Folders
     {

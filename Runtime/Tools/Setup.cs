@@ -25,17 +25,18 @@ public static class Setup
         gitAssets.QueueImport("git+https://github.com/KyleBanks/scene-ref-attribute.git");
         gitAssets.QueueImport("git+https://github.com/mob-sakai/UIEffect.git");
         gitAssets.QueueImport("git+https://github.com/mob-sakai/SoftMaskForUGUI.git");
+        gitAssets.QueueImport("git+https://github.com/AnnulusGames/Alchemy.git?path=/Alchemy/Assets/Alchemy");
+        gitAssets.QueueImport("git+https://github.com/adammyhre/Unity-Utils.git");
 
         gitAssets.ProcessImportQueue();
 
         //Asset Store
         Assets.ImportAsset("DOTween Pro.unitypackage", "Demigiant/Editor ExtensionsVisual Scripting");
-        Assets.ImportAsset("Cartoon FX Remaster.unitypackage", "Jean Moreno/Particle Systems");
     }
 
     class GitAssets
     {
-        List<string> _addRequests = new();
+        readonly List<string> _addRequests = new();
 
         public void QueueImport(string path)
         {

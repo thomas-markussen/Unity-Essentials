@@ -1,6 +1,6 @@
 {
     "name": "Thimas.Essentials",
-    "rootNamespace": "",
+    "rootNamespace": "Thimas",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
